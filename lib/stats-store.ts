@@ -12,7 +12,7 @@ const DATA_FILE = path.join(process.cwd(), "data", "stats.json");
 const SEED_FILE = path.join(process.cwd(), "data", "stats.seed.json");
 
 const DEFAULT_STATS: Stats = {
-  instagramFollowers: 58300,
+  instagramFollowers: 70200,
   facebookFollowers: 67000,
   youtubeVideos: 112,
   yearsOfCareer: 20,

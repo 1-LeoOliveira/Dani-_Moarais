@@ -1,8 +1,10 @@
 import Image from "next/image";
+import VideoEmbed from "./VideoEmbed";
 import bgPhoto from "@/public/images/show-2.jpg";
-import thumb from "@/public/images/show-about.jpg";
+import thumb from "@/public/images/video-thumb.jpg";
 
 const YOUTUBE_LINK = "https://www.youtube.com/@DaniMoraisOficial";
+const FEATURED_VIDEO_ID = "qfE2GBLMpR4";
 const MARQUEE_TEXT = "Assista agora ✦ Assista agora ✦ Assista agora ✦ Assista agora ✦";
 
 export default function Videos() {
@@ -13,24 +15,7 @@ export default function Videos() {
       </div>
       <div className="content wrap">
         <h2>Vídeos</h2>
-        <a
-          className="video-frame"
-          href={YOUTUBE_LINK}
-          target="_blank"
-          rel="noopener"
-          aria-label="Assistir vídeos de Dani Morais no YouTube"
-        >
-          <Image
-            src={thumb}
-            alt="Dani Morais no palco"
-            fill
-            sizes="(max-width: 900px) 90vw, 860px"
-            style={{ objectFit: "cover" }}
-          />
-          <span className="play-btn" aria-hidden="true">
-            ▶
-          </span>
-        </a>
+        <VideoEmbed videoId={FEATURED_VIDEO_ID} thumb={thumb} alt="Dani Morais no palco" />
         <div className="video-marquee">
           <div className="video-marquee-track">
             <span>{MARQUEE_TEXT}</span>
