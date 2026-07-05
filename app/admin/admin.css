@@ -72,7 +72,7 @@
   padding: 11px 14px;
 }
 .admin-form input:focus-visible {
-  outline: 2px solid var(--pink);
+  outline: 2px solid var(--yellow);
 }
 .admin-form-row {
   display: flex;
@@ -89,7 +89,7 @@
   align-self: flex-start;
 }
 .admin-error {
-  color: var(--pink);
+  color: var(--yellow);
   font-size: 0.85rem;
 }
 .admin-list {
