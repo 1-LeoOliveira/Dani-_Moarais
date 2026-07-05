@@ -40,7 +40,7 @@ export default function Header() {
       <header id="topbar" className={scrolled ? "scrolled" : ""}>
         <div className="wrap nav">
           <a className="logo" href="#top" onClick={() => setOpen(false)}>
-            DANI
+            DANI MORAIS
           </a>
           <button
             className={`menu-btn${open ? " open" : ""}`}

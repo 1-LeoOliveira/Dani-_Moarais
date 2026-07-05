@@ -1,0 +1,50 @@
+[
+  {
+    "id": "b1a3d1d0-0001-4a3e-9c3e-000000000001",
+    "day": "12",
+    "month": "jul.",
+    "tour": "Turnê 2026",
+    "city": "Belo Horizonte - MG",
+    "detailsUrl": "https://wa.me/5531982849066?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20show%20em%20Belo%20Horizonte."
+  },
+  {
+    "id": "b1a3d1d0-0001-4a3e-9c3e-000000000002",
+    "day": "19",
+    "month": "jul.",
+    "tour": "Turnê 2026",
+    "city": "Sete Lagoas - MG",
+    "detailsUrl": "https://wa.me/5531982849066?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20show%20em%20Sete%20Lagoas."
+  },
+  {
+    "id": "b1a3d1d0-0001-4a3e-9c3e-000000000003",
+    "day": "02",
+    "month": "ago.",
+    "tour": "Turnê 2026",
+    "city": "Uberlândia - MG",
+    "detailsUrl": "https://wa.me/5531982849066?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20show%20em%20Uberl%C3%A2ndia."
+  },
+  {
+    "id": "b1a3d1d0-0001-4a3e-9c3e-000000000004",
+    "day": "16",
+    "month": "ago.",
+    "tour": "Turnê 2026",
+    "city": "São Paulo - SP",
+    "detailsUrl": "https://wa.me/5531982849066?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20show%20em%20S%C3%A3o%20Paulo."
+  },
+  {
+    "id": "b1a3d1d0-0001-4a3e-9c3e-000000000005",
+    "day": "30",
+    "month": "ago.",
+    "tour": "Turnê 2026",
+    "city": "Montes Claros - MG",
+    "detailsUrl": "https://wa.me/5531982849066?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20show%20em%20Montes%20Claros."
+  },
+  {
+    "id": "b1a3d1d0-0001-4a3e-9c3e-000000000006",
+    "day": "13",
+    "month": "set.",
+    "tour": "Turnê 2026",
+    "city": "Ribeirão Preto - SP",
+    "detailsUrl": "https://wa.me/5531982849066?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20show%20em%20Ribeir%C3%A3o%20Preto."
+  }
+]

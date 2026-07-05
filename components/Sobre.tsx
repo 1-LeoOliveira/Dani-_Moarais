@@ -1,5 +1,7 @@
 import Reveal from "./Reveal";
 import Counter from "./Counter";
+import { getStats } from "@/lib/stats-store";
+import { formatCount } from "@/lib/format";
 
 const GENRES = ["Sertanejo", "Funk", "Axé", "Pagode", "Hits do momento"];
 
@@ -10,13 +12,6 @@ const MILESTONES = [
   { year: "2013", title: "Carnaval de Salvador", text: "No circuito de um dos maiores carnavais do país." },
   { year: "2013–15", title: "Apresentadora TV Cruzeiro", text: "Canal Premiere." },
   { year: "2014", title: "FIFA Fan Fest", text: "ExpoMinas — palco oficial da Copa do Mundo." },
-];
-
-const STATS = [
-  { target: 58.3, suffix: " mil", label: "seguidores no Instagram" },
-  { target: 67, suffix: " mil", label: "seguidores no Facebook" },
-  { target: 112, suffix: "", label: "vídeos no YouTube" },
-  { target: 20, suffix: "+", label: "anos de carreira" },
 ];
 
 const FEATS = [
@@ -30,7 +25,16 @@ const FEATS = [
   "Tuca Fernandes",
 ];
 
-export default function Sobre() {
+export default async function Sobre() {
+  const savedStats = await getStats();
+
+  const stats = [
+    { ...formatCount(savedStats.instagramFollowers), label: "seguidores no Instagram" },
+    { ...formatCount(savedStats.facebookFollowers), label: "seguidores no Facebook" },
+    { ...formatCount(savedStats.youtubeVideos), label: "vídeos no YouTube" },
+    { target: savedStats.yearsOfCareer, suffix: "+", label: "anos de carreira" },
+  ];
+
   return (
     <section className="sobre" id="sobre">
       <div className="wrap">
@@ -61,7 +65,7 @@ export default function Sobre() {
         </div>
 
         <div className="stats-grid">
-          {STATS.map((stat) => (
+          {stats.map((stat) => (
             <Reveal as="div" className="stat" key={stat.label}>
               <Counter target={stat.target} suffix={stat.suffix} />
               <span>{stat.label}</span>

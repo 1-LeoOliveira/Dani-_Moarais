@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dados editados ao vivo pelo painel /admin — nunca versionar, para o deploy
+# de código nunca sobrescrever o que a Dani cadastrar no site no ar.
+# Os arquivos .seed.json (versionados) servem só de modelo inicial.
+/data/agenda.json
+/data/stats.json
