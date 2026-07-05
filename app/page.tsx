@@ -1,15 +1,13 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import PaperTear from "@/components/PaperTear";
-import Ticker from "@/components/Ticker";
-import ShowAbout from "@/components/ShowAbout";
-import Timeline from "@/components/Timeline";
-import Discografia from "@/components/Discografia";
-import Stats from "@/components/Stats";
-import ShowsGallery from "@/components/ShowsGallery";
-import Feats from "@/components/Feats";
-import Contact from "@/components/Contact";
+import MusicaAgenda from "@/components/MusicaAgenda";
+import Streaming from "@/components/Streaming";
+import Videos from "@/components/Videos";
+import Sobre from "@/components/Sobre";
+import Galeria from "@/components/Galeria";
+import Contato from "@/components/Contato";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 export default function Home() {
   return (
@@ -17,29 +15,20 @@ export default function Home() {
       <Header />
 
       <Hero />
-      <PaperTear />
 
-      <Ticker />
+      <MusicaAgenda />
+      <Streaming />
 
-      <ShowAbout />
+      <Videos />
 
-      <PaperTear flip />
-      <Timeline />
-      <PaperTear pathFlip />
+      <Sobre />
 
-      <Discografia />
+      <Galeria />
 
-      <Stats />
-
-      <ShowsGallery />
-
-      <PaperTear flip />
-      <Feats />
-      <PaperTear pathFlip />
-
-      <Contact />
-
+      <Contato />
       <Footer />
+
+      <CookieBanner />
     </>
   );
 }

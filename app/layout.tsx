@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Fredoka, Outfit } from "next/font/google";
+import { Oswald, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const fredoka = Fredoka({
+const oswald = Oswald({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-fredoka",
+  variable: "--font-oswald",
   display: "swap",
 });
 
-const outfit = Outfit({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-outfit",
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -49,7 +49,7 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       data-scroll-behavior="smooth"
-      className={`${fredoka.variable} ${outfit.variable}`}
+      className={`${oswald.variable} ${montserrat.variable}`}
     >
       <body>{children}</body>
     </html>
