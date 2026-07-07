@@ -126,6 +126,16 @@
 .admin-row-actions .btn {
   white-space: nowrap;
 }
+.admin-row-readonly {
+  grid-template-columns: 50px 50px 1.1fr 1.3fr 1.5fr;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.admin-row-readonly span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media (max-width: 800px) {
   .admin-row {
     grid-template-columns: 1fr 1fr;

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { SPOTIFY_LINK } from "@/lib/constants";
-import { getShows } from "@/lib/agenda-store";
+import { getAgenda } from "@/lib/agenda";
 import SpotifyIcon from "./icons/SpotifyIcon";
 import AgendaCarousel from "./AgendaCarousel";
 import avatar from "@/public/images/album-2.jpg";
 
 export default async function MusicaAgenda() {
-  const shows = await getShows();
+  const { shows } = await getAgenda();
 
   return (
     <section className="musica-agenda" id="agenda">

@@ -1,9 +1,16 @@
 import Reveal from "./Reveal";
 import Counter from "./Counter";
-import { getStats } from "@/lib/stats-store";
+import { getStatsData } from "@/lib/stats";
 import { formatCount } from "@/lib/format";
 
-const GENRES = ["Sertanejo", "Funk", "Axé", "Pagode", "Hits do momento"];
+const GENRES = [
+  "Sertanejo",
+  "Funk",
+  "Axé",
+  "Pagode",
+  "Hits do momento",
+  "Eventos sociais e corporativos",
+];
 
 const MILESTONES = [
   { year: "2002", title: "Formação em Música", text: "Universidade Estadual de Montes Claros (Unimontes)." },
@@ -26,7 +33,7 @@ const FEATS = [
 ];
 
 export default async function Sobre() {
-  const savedStats = await getStats();
+  const { stats: savedStats } = await getStatsData();
 
   const stats = [
     { ...formatCount(savedStats.instagramFollowers), label: "seguidores no Instagram" },
@@ -40,13 +47,22 @@ export default async function Sobre() {
       <div className="wrap">
         <span className="eyebrow">Sobre</span>
         <Reveal as="h2">
-          Um novo conceito de show no cenário da <span className="pink">música mineira</span>
+          Um novo conceito de show para quem busca{" "}
+          <span className="pink">emoção, energia e conexão</span>
         </Reveal>
         <Reveal as="p" className="lead">
-          Do sertanejo ao funk, o grande diferencial desse repertório — pensado por meio de
-          estudo de público — é fazer com que o show seja cheio de energia e contagiante para
-          todos! Mais de 20 anos de carreira, passagens por Ídolos e The Voice Brasil, e uma
-          trajetória construída palco a palco em Minas Gerais e por todo o Brasil.
+          O encontro de Minas com a Bahia deu origem a uma artista plural, que transforma
+          diferentes influências em uma experiência única no palco.
+        </Reveal>
+        <Reveal as="p" className="lead">
+          Com mais de 20 anos de carreira, passagens por grandes realities musicais e uma
+          trajetória construída diante do público, Dani Morais entrega um espetáculo que vai
+          além de estilos musicais: conecta pessoas por meio da música, da presença e da
+          autenticidade.
+        </Reveal>
+        <Reveal as="p" className="lead">
+          Cada apresentação é viva, intensa e pensada para emocionar, celebrar e fazer o
+          público cantar do início ao fim.
         </Reveal>
         <Reveal as="div" className="genres">
           {GENRES.map((genre) => (

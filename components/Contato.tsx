@@ -10,8 +10,8 @@ export default function Contato() {
           Leve esse show <span className="pink">para o seu evento</span>
         </Reveal>
         <Reveal as="p" className="sub">
-          Festas, carnavais, eventos corporativos e festivais. Fale com a equipe e monte o show
-          ideal para o seu público.
+          Eventos sociais e corporativos. Fale com a equipe e monte o show ideal para o seu
+          público.
         </Reveal>
 
         <div className="contato-links">
