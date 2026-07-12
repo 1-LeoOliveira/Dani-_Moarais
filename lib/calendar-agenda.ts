@@ -151,7 +151,7 @@ export async function getShowsFromCalendar(): Promise<Show[] | null> {
   if (!url) return null;
 
   try {
-    const res = await fetch(url, { next: { revalidate: 1800 } });
+    const res = await fetch(url, { next: { revalidate: 60 } });
     if (!res.ok) return null;
     const raw = await res.text();
     const events = parseEvents(raw);

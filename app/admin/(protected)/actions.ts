@@ -47,7 +47,6 @@ export async function updateStatsAction(formData: FormData) {
   await saveStats({
     instagramFollowers: readNumber(formData, "instagramFollowers"),
     facebookFollowers: readNumber(formData, "facebookFollowers"),
-    youtubeVideos: readNumber(formData, "youtubeVideos"),
     yearsOfCareer: readNumber(formData, "yearsOfCareer"),
   });
   revalidatePath("/");

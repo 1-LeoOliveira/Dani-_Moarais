@@ -26,7 +26,6 @@ export default async function AdminAgendaPage() {
             <div className="admin-row admin-row-readonly">
               <span>Instagram: {stats.instagramFollowers}</span>
               <span>Facebook: {stats.facebookFollowers}</span>
-              <span>YouTube: {stats.youtubeVideos}</span>
               <span>Anos: {stats.yearsOfCareer}</span>
             </div>
           </>
@@ -56,16 +55,6 @@ export default async function AdminAgendaPage() {
             </div>
             <div className="admin-form-row">
               <label>
-                Vídeos no YouTube
-                <input
-                  name="youtubeVideos"
-                  type="number"
-                  min="0"
-                  defaultValue={stats.youtubeVideos}
-                  required
-                />
-              </label>
-              <label>
                 Anos de carreira
                 <input
                   name="yearsOfCareer"
@@ -88,7 +77,7 @@ export default async function AdminAgendaPage() {
           <h2>Agenda de shows</h2>
           <p className="admin-hint">
             A agenda agora é gerenciada direto pelo Google Calendar. Para adicionar, editar ou
-            remover um show, edite os eventos por lá — o site atualiza sozinho em até 30 minutos.
+            remover um show, edite os eventos por lá — o site atualiza sozinho em até 1 minuto.
             Convenção: título do evento = cidade (ex. &quot;Belo Horizonte - MG&quot;), local
             (opcional) = nome da turnê, descrição (opcional) = link de ingressos.
           </p>

@@ -38,7 +38,6 @@ export default async function Sobre() {
   const stats = [
     { ...formatCount(savedStats.instagramFollowers), label: "seguidores no Instagram" },
     { ...formatCount(savedStats.facebookFollowers), label: "seguidores no Facebook" },
-    { ...formatCount(savedStats.youtubeVideos), label: "vídeos no YouTube" },
     { target: savedStats.yearsOfCareer, suffix: "+", label: "anos de carreira" },
   ];
 

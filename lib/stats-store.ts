@@ -4,7 +4,6 @@ import path from "path";
 export type Stats = {
   instagramFollowers: number;
   facebookFollowers: number;
-  youtubeVideos: number;
   yearsOfCareer: number;
 };
 
@@ -14,7 +13,6 @@ const SEED_FILE = path.join(process.cwd(), "data", "stats.seed.json");
 const DEFAULT_STATS: Stats = {
   instagramFollowers: 70200,
   facebookFollowers: 67000,
-  youtubeVideos: 112,
   yearsOfCareer: 20,
 };
 
