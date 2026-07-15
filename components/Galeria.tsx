@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Reveal from "./Reveal";
+import GaleriaItem from "./GaleriaItem";
 import album1 from "@/public/images/album-1.jpg";
 import album2 from "@/public/images/album-2.jpg";
-import album3 from "@/public/images/album-3.jpg";
+import showAbout from "@/public/images/show-about.jpg";
 import show1 from "@/public/images/show-1.jpg";
 import show3 from "@/public/images/show-3.jpg";
 import show4 from "@/public/images/show-4.jpg";
@@ -10,9 +10,27 @@ import show5 from "@/public/images/show-5.jpg";
 import show6 from "@/public/images/show-6.jpg";
 
 const ITEMS = [
-  { img: album1, title: "Solto e Agarrado", sub: "2013", alt: "Dani Morais cantando no palco, single Solto e Agarrado" },
-  { img: album2, title: "Agora Chora", sub: "2014", alt: "Retrato de Dani Morais, single Agora Chora" },
-  { img: album3, title: "Agora Tô Querendo", sub: "2015", alt: "Retrato de Dani Morais, single Agora Tô Querendo" },
+  {
+    img: album1,
+    title: "Solto e Agarrado",
+    sub: "2013",
+    alt: "Dani Morais cantando no palco, single Solto e Agarrado",
+    audio: "/music/junto%20e%20agarradinho.mp3",
+  },
+  {
+    img: album2,
+    title: "Agora Chora",
+    sub: "2014",
+    alt: "Retrato de Dani Morais, single Agora Chora",
+    audio: "/music/Agora%20chora.mp3",
+  },
+  {
+    img: showAbout,
+    title: "Agora Tô Querendo",
+    sub: "2015",
+    alt: "Retrato de Dani Morais, single Agora Tô Querendo",
+    audio: "/music/Agora%20to%20querendo.mp3",
+  },
   { img: show1, title: "Rico Traders", sub: "São Paulo · SP", alt: "Dani Morais no show da Rico Traders" },
   { img: show3, title: "Show", sub: "Belo Horizonte · MG", alt: "Dani Morais em show em Belo Horizonte" },
   { img: show4, title: "Virada Cultural", sub: "Belo Horizonte · MG", alt: "Dani Morais na Virada Cultural de BH" },
@@ -36,12 +54,8 @@ export default function Galeria() {
         </Reveal>
         <div className="galeria-grid">
           {ITEMS.map((item) => (
-            <Reveal as="figure" key={item.title}>
-              <Image src={item.img} alt={item.alt} sizes="(max-width: 900px) 45vw, 22vw" />
-              <figcaption>
-                <strong>{item.title}</strong>
-                {item.sub}
-              </figcaption>
+            <Reveal as="div" key={item.title}>
+              <GaleriaItem {...item} />
             </Reveal>
           ))}
         </div>
